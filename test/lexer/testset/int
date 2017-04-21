@@ -1,0 +1,4 @@
+int a = 123
+int a = 010
+int a = 0b10
+int a = 0x10
