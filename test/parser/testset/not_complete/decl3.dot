@@ -1,0 +1,35 @@
+digraph G {
+	p0[label=root]
+	p1[label=<decl>]
+	p0->p1
+	p2[label=<struct>]
+	p1->p2
+	p3[label=<ident:n>]
+	p1->p3
+	p4[label=<ident:node>]
+	p2->p4
+	p5[label=<list>]
+	p4->p5
+	p6[label=<decl>]
+	p5->p6
+	p7[label=<list>]
+	p5->p7
+	p8[label=<int>]
+	p6->p8
+	p9[label=<ident:n1>]
+	p6->p9
+	p10[label=<decl>]
+	p7->p10
+	p11[label=<list>]
+	p7->p11
+	p12[label=<int>]
+	p10->p12
+	p13[label=<ident:n2>]
+	p10->p13
+	p14[label=<decl>]
+	p11->p14
+	p15[label=<int>]
+	p14->p15
+	p16[label=<ident:n3>]
+	p14->p16
+}

@@ -1,0 +1,1 @@
+union a b = <union c>d, e = <union f>(g)

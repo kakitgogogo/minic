@@ -4,7 +4,7 @@
 using namespace std;
 
 const int KW_IDX = 3;
-const int KW_NUM = 20;
+const int KW_NUM = 26;
 
 unordered_map<std::string, Tag> keywords;
 
@@ -61,7 +61,7 @@ static const char* LexErrorStr[] = {
 
 void Lexer::error(LexError code)
 {
-	cout << fileName << ":" << row << ":" << col << ":" << LexErrorStr[code] << endl;
+	cout << fileName << ":" << row << ":" << col << ": " << LexErrorStr[code] << endl;
 }
 
 shared_ptr<Token> Lexer::tokenize()
@@ -98,7 +98,8 @@ shared_ptr<Token> Lexer::tokenize()
 		// number
 		else if(ch >= '0' && ch <= '9')
 		{
-			int val = 0, isfloat = 0;
+			long long val = 0;
+			int isfloat = 0;
 			double dval = 0;
 			if(ch != '0')
 			{
@@ -114,13 +115,13 @@ shared_ptr<Token> Lexer::tokenize()
 			else
 			{
 				scan();
-				if(ch == 'x')
+				if(ch == 'x' || ch == 'X')
 				{
 					scan();
 					if((ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'F') || (ch >= 'a' && ch <= 'f'))
 					{
 						do{
-							val=val*16 + ch;
+							val = val*16 + ch;
 							if(ch >= '0' && ch <= '9') val -= '0';
 							else if(ch >= 'A' && ch <= 'F') val += 10 - 'A';
 							else if(ch >= 'a'&& ch <= 'f') val += 10 - 'a';							
@@ -133,7 +134,7 @@ shared_ptr<Token> Lexer::tokenize()
 						token = new Token(ERR);
 					}
 				}
-				else if(ch == 'b')
+				else if(ch == 'b' || ch == 'B')
 				{
 					scan();
 					if(ch == '0' || ch == '1')
@@ -273,7 +274,6 @@ shared_ptr<Token> Lexer::tokenize()
 				}
 				else 
 				{
-					cout << "here" << endl;
 					error(LE_CHAR_NO_RQUOTE);
 					token = new Token(ERR);
 				}
@@ -337,7 +337,20 @@ shared_ptr<Token> Lexer::tokenize()
 				case '+':
 					token = new Token(scan('+') ? INC : ADD); break;
 				case '-':
-					token = new Token(scan('-') ? DEC : SUB); break;
+					scan();
+					if(ch == '-')
+					{
+						token = new Token(DEC); scan();
+					}
+					else if(ch == '>')
+					{
+						token = new Token(PTR); scan();
+					}
+					else
+					{
+						token = new Token(SUB);
+					}
+					break;
 				case '*':
 					token = new Token(MUL); scan(); break;
 				case '/':
@@ -402,16 +415,24 @@ shared_ptr<Token> Lexer::tokenize()
 					token = new Token(scan('=') ? EQ : ASSIGN); break;
 				case '&':
 					token = new Token(scan('&') ? LAND : AND); break;
+				case '^':
+					token = new Token(XOR); scan(); break;
 				case '|':
 					token = new Token(scan('|') ? LOR : OR); break;
 				case '!':
 					token = new Token(scan('=') ? NE : NOT); break;
+				case '~':
+					token = new Token(BNOT); scan(); break;
 				case ',':
 					token = new Token(COMMA); scan(); break;
 				case ':':
 					token = new Token(COLON); scan(); break;
 				case ';':
 					token = new Token(SEMICOLON); scan(); break;
+				case '.':
+					token = new Token(DOT); scan(); break;
+				case '?':
+					token = new Token(QUES); scan(); break;
 				case '(':
 					token = new Token(LPAREN); scan(); break;
 				case ')':

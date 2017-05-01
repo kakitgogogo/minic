@@ -1,0 +1,9 @@
+// #include <stdio.h>
+
+// prog1
+
+int main(int argc, char* argv[])
+{
+	int a;
+	printf("%d", a);
+}

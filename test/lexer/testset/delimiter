@@ -1,27 +1,46 @@
-int a = 1 + 1;
-a<< 1;
-a >>1;
-a <= b;
-a >= b;
-a < b;
+a<< 1
+a <= b
+a < b
+
+a >>1
+a >= b
 a > b;
+
+a=b
 a==b;
+
 a != b;
 !a;
+
+
+a | b
+a || b
+
+a & b
+a && b
+
 a, b
-a | b;
-a || b;
-a & b;
-a && b;
-&b;
-a++;
-a--;
+a.b
+a ^ b
+&b
+~b
+
+a++
+a+b
+
+a--
+a->b
+a-b
+
 # abc
 // abc
 /*
 asdasd
 */
+
 (a)
 [a]
 {a}
+
+a?b:c
 

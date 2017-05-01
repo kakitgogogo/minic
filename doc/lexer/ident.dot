@@ -1,0 +1,8 @@
+digraph G {
+  start[shape=plaintext]
+  0[shape=circle]
+  id[shape=doublecircle]
+  start->0	
+  0->id[label="_|A-Z|a-z"]
+  id->id[label="_|A-Z|a-z|0-9"]
+}

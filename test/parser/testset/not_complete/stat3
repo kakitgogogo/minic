@@ -1,0 +1,6 @@
+{
+	if(i)
+	{
+		printf("hello\n");
+	}
+}

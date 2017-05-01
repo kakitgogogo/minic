@@ -10,5 +10,5 @@ all: $(TEST)
 clean:
 	rm -f $(TEST)
 
-t: t.cpp ../../src/lexer.cpp ../../src/token.cpp
+t: t.cpp ../../src/lexer.cpp ../../src/token.cpp ../../src/parser.cpp
 	$(CC) $(CXXFLAG) $(INCL) -o $@ $^

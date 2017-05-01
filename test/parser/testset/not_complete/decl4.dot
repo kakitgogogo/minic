@@ -1,0 +1,29 @@
+digraph G {
+	p0[label=root]
+	p1[label=<decl>]
+	p0->p1
+	p2[label=<enum>]
+	p1->p2
+	p3[label=<ident:ee>]
+	p1->p3
+	p4[label=<ident:e>]
+	p2->p4
+	p5[label=<,>]
+	p4->p5
+	p6[label=<,>]
+	p5->p6
+	p7[label=<=>]
+	p5->p7
+	p8[label=<,>]
+	p6->p8
+	p9[label=<ident:c>]
+	p6->p9
+	p10[label=<ident:d>]
+	p7->p10
+	p11[label=<10>]
+	p7->p11
+	p12[label=<ident:a>]
+	p8->p12
+	p13[label=<ident:b>]
+	p8->p13
+}

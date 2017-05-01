@@ -10,22 +10,27 @@ const char* tokenName[] = {
 
 	"int", "float", "double", 
 	"char", "void",
-	"extern",
+	"extern", "static", 
 	"if", "else",
 	"switch", "case", "default",
 	"while", "do", "for",
 	"break", "continue", "return",
 	"struct", "enum", "union",
+	"sizeof",
+	"volatile", "const",
+	"inline",
+	"goto",
 
-	"INTEGER", "FLOAT", 
-	"CHARACTER", "STRING",
+	"INT", "FLOAT", 
+	"CHAR", "STR",
 
+	/* old version
 	"not",
 	"add", "sub", "mul", "div", "mod",
 	"inc", "dec",
 	"gt", "ge", "lt", "le", "eq", "ne",
 	"land","lor",
-	"and", "or",
+	"and", "or", "xor", "bnot",
 	"shl", "shr",
 	"lparen", "rparen",
 	"lbrack", "rbrack",
@@ -33,6 +38,26 @@ const char* tokenName[] = {
 	"comma", "colon", "semicolon",
 	"assign",
 	"macro",
+	"dot", "ptr",
+	"ques",
+	*/
+
+	/* new version */
+	"!",
+	"+", "-", "*", "/", "%",
+	"++", "--",
+	"gt", "ge", "lt", "le", "==", "!=",
+	"&&", "||",
+	"&", "|", "^", "~",
+	"shl", "shr",
+	"(", ")",
+	"[", "]",
+	"{", "}",
+	",", ":", ";",
+	"=",
+	"#",
+	".", "ptr",
+	"?",
 };
 
 
@@ -48,20 +73,20 @@ string Ident::to_string()
 
 string Int::to_string()
 {
-	return string("<")+tokenName[tag]+":"+::to_string(val)+">";
+	return string("<")+::to_string(val)+">";
 }
 
 string Float::to_string()
 {
-	return string("<")+tokenName[tag]+":"+::to_string(val)+">";
+	return string("<")+::to_string(val)+">";
 }
 
 string Char::to_string()
 {
-	return string("<")+tokenName[tag]+":"+val+">";
+	return string("<'")+val+"'>";
 }
 
 string Str::to_string()
 {
-	return string("<")+tokenName[tag]+":"+val+">";
+	return string("<\"")+val+"\">";
 }

@@ -1,0 +1,16 @@
+digraph G {
+	p0[label=root]
+	p1[label=<list>]
+	p0->p1
+	p2[label=<if>]
+	p1->p2
+	p3[label=<ident:i>]
+	p2->p3
+	p4[label=<call>]
+	p2->p4
+	p5[label=<ident:printf>]
+	p4->p5
+	p6[label=<"hello
+">]
+	p4->p6
+}

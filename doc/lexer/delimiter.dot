@@ -1,0 +1,12 @@
+digraph G {
+  start[shape=plaintext]
+  0[shape=circle]
+  gt[shape=doublecircle]
+  ge[shape=doublecircle]
+  shr[shape=doublecircle]
+
+  start->0	
+  0->gt[label=">"]
+  gt->ge[label="="]
+  gt->shr[label=">"]
+}

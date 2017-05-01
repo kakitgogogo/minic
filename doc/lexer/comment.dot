@@ -1,0 +1,22 @@
+digraph G {
+  start[shape=plaintext]
+  0[shape=circle]
+  1[shape=circle]
+  2[shape=circle]
+  3[shape=circle]
+  div[shape=doublecircle]
+  mcom[shape=doublecircle]
+  scom[shape=doublecircle]
+  err[shape=doublecircle]
+
+  start->0	
+  0->div[label="/"]
+  div->1[label="/"]
+  1->scom[label="\\n|-1"]
+  div->2[label="*"]
+  2->err[label="-1"]
+  2->3[label="*"]
+  2->2[label="other"]
+  3->mcom[label="/"]
+  3->2[label="other"]
+}

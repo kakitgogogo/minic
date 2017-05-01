@@ -1,0 +1,1 @@
+res = func(a=(b++ ? 1 : 2)+*~!+-c++--*d%5, a<<1>>2, int(a), sizeof(int))

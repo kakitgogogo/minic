@@ -1,0 +1,5 @@
+digraph G {
+	p0[label=root]
+	p1[label=<null>]
+	p0->p1
+}

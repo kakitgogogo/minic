@@ -1,0 +1,35 @@
+digraph G {
+	p0[label=root]
+	p1[label=<decl>]
+	p0->p1
+	p2[label=<void>]
+	p1->p2
+	p3[label=<pointer>]
+	p1->p3
+	p4[label=<*>]
+	p3->p4
+	p5[label=<funcdecl>]
+	p3->p5
+	p6[label=<pointer>]
+	p5->p6
+	p7[label=<,>]
+	p5->p7
+	p8[label=<*>]
+	p6->p8
+	p9[label=<ident:func>]
+	p6->p9
+	p10[label=<decl>]
+	p7->p10
+	p11[label=<struct>]
+	p7->p11
+	p12[label=<int>]
+	p10->p12
+	p13[label=<pointer>]
+	p10->p13
+	p14[label=<ident:s>]
+	p11->p14
+	p15[label=<*>]
+	p13->p15
+	p16[label=<ident:a>]
+	p13->p16
+}

@@ -1,0 +1,30 @@
+digraph G {
+	p0[label=root]
+	p1[label=<list>]
+	p0->p1
+	p2[label=<for>]
+	p1->p2
+	p3[label=<=>]
+	p2->p3
+	p4[label=<lt>]
+	p2->p4
+	p5[label=<++>]
+	p2->p5
+	p6[label=<call>]
+	p2->p6
+	p7[label=<ident:i>]
+	p3->p7
+	p8[label=<0>]
+	p3->p8
+	p9[label=<ident:i>]
+	p4->p9
+	p10[label=<ident:n>]
+	p4->p10
+	p11[label=<ident:i>]
+	p5->p11
+	p12[label=<ident:printf>]
+	p6->p12
+	p13[label=<"hello
+">]
+	p6->p13
+}

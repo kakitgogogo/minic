@@ -1,0 +1,27 @@
+digraph G {
+  start[shape=plaintext]
+  0[shape=circle]
+  1[shape=circle]
+  2[shape=circle]
+  3[shape=circle]
+  bnum[shape=doublecircle]
+  onum[shape=doublecircle]
+  dnum[shape=doublecircle]
+  hnum[shape=doublecircle]
+  err[shape=doublecircle]
+
+  start->0	
+  0->dnum[label="1-9"]
+  dnum->dnum[label="0-9"]
+  0->1[label="0"]
+  1->onum[label="0-7"]
+  onum->onum[label="0-7"]
+  1->2[label="b"]
+  1->3[label="x"]
+  2->bnum[label="0-1"]
+  bnum->bnum[label="0-1"]
+  2->err[label="other"]
+  3->hnum[label="0-9A-Fa-f"]
+  hnum->hnum[label="0-9A-Fa-f"]
+  3->err[label="other"]
+}

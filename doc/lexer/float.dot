@@ -1,0 +1,23 @@
+digraph G {
+  start[shape=plaintext]
+  0[shape=circle]
+  1[shape=circle]
+  2[shape=circle]
+  3[shape=circle]
+  float1[shape=doublecircle]
+  float2[shape=doublecircle]
+  err[shape=doublecircle]
+
+  start->0	
+  0->1[label="0-9"]
+  1->1[label="0-9"]
+  1->float1[label="."]
+  1->2[label="E|e"]
+  1->err[label="other"]
+  float1->float1[label="0-9"]
+  float1->2[label="E|e"]
+  2->3[label="+|-"]
+  3->float2[label="0-9"]
+  2->float2[label="0-9"]
+  2->err[label="other"]
+}

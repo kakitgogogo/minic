@@ -1,0 +1,192 @@
+-------------------------- First: --------------------------
+<add-expr-tail>:  +  -  empty
+<add-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<and-expr-tail>:  &  empty
+<and-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<args-expr>:  !  &  (  *  +  ++  -  --  <  constant  empty  ident  sizeof  ~
+<args-list-expr-tail>:  ,  empty
+<args-list-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<array-size>:  !  &  (  *  +  ++  -  --  <  constant  empty  ident  sizeof  ~
+<assign-expr-tail>:  =  empty
+<assign-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<assign-oper>:  =
+<case-stat-list>:  case  default  empty
+<case-stat>:  case  default
+<cast-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<compound-stat>:  {
+<cond-expr-tail>:  ?  empty
+<cond-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<const-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<decl-spec-tail>:  char  const  double  empty  enum  extern  float  inline  int  static  struct  union  void  volatile
+<decl-spec>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<decl-stat>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<decl>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<declarator>:  (  *  ident
+<direct-declarator-tail>:  (  [  empty
+<direct-declarator>:  (  ident
+<else-stat>:  else  empty
+<enum-list-tail>:  ,  empty
+<enum-list>:  ident
+<enum-spec-tail>:  empty  {
+<enum-spec>:  enum
+<enumerator-tail>:  =  empty
+<enumerator>:  ident
+<equal-expr-tail>:  !=  ==  empty
+<equal-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<expr-stat>:  !  &  (  *  +  ++  -  --  ;  <  constant  ident  sizeof  ~
+<expr-tail>:  ,  empty
+<expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<extern-decl-tail>:  ;  {
+<extern-decl>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<for-stat>:  for
+<func-spec>:  inline
+<if-stat>:  if
+<init-decl-list-tail>:  ,  empty
+<init-decl-list>:  (  *  empty  ident
+<init-decl-tail>:  =  empty
+<init-decl>:  (  *  ident
+<initializer-list-tail>:  ,
+<initializer-list>:  !  &  (  *  +  ++  -  --  <  constant  empty  ident  sizeof  {  ~
+<initializer>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  {  ~
+<jump-stat>:  break  continue  goto  return
+<land-expr-tail>:  &&  empty
+<land-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<lor-expr-tail>:  empty  ||
+<lor-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<mul-expr-tail>:  %  *  /  empty
+<mul-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<or-expr-tail>:  empty  or
+<or-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<param-decl-tail>:  (  *  empty  ident
+<param-decl>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<param-list-tail>:  ,  empty
+<param-list>:  char  const  double  empty  enum  extern  float  inline  int  static  struct  union  void  volatile
+<pointer-tail>:  *  const  empty  volatile
+<pointer>:  *
+<post-expr-tail>:  (  ++  --  ->  .  [  empty
+<post-expr>:  (  constant  ident
+<prim-expr>:  (  constant  ident
+<rela-expr-tail>:  <  <=  >  >=  empty
+<rela-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<shift-expr-tail>:  <<  >>  empty
+<shift-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<spec-qual-list-tail>:  char  const  double  empty  enum  float  int  struct  union  void  volatile
+<spec-qual-list>:  char  const  double  enum  float  int  struct  union  void  volatile
+<stat-list>:  !  &  (  *  +  ++  -  --  ;  <  break  char  const  constant  continue  do  double  empty  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  ~
+<stat>:  !  &  (  *  +  ++  -  --  ;  <  break  char  const  constant  continue  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  ~
+<storage-spec>:  extern  static
+<struct-decl-list>:  char  const  double  empty  enum  float  int  struct  union  void  volatile
+<struct-decl>:  char  const  double  enum  float  int  struct  union  void  volatile
+<struct-declarator-list-tail>:  ,  empty
+<struct-declarator-list>:  (  *  ident
+<struct-declarator-tail>:  :  empty
+<struct-declarator>:  (  *  ident
+<struct-or-union-spec-tail>:  empty  {
+<struct-or-union-spec>:  struct  union
+<switch-stat>:  switch
+<tran-unit>:  char  const  double  empty  enum  extern  float  inline  int  static  struct  union  void  volatile
+<type-name>:  char  double  enum  float  int  struct  union  void
+<type-qual-list>:  const  empty  volatile
+<type-qual>:  const  volatile
+<type-spec>:  char  double  enum  float  int  struct  union  void
+<unary-expr>:  !  &  (  *  +  ++  -  --  constant  ident  sizeof  ~
+<unary-oper>:  !  &  *  +  -  ~
+<while-stat>:  do  while
+<xor-expr-tail>:  ^  empty
+<xor-expr>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+-------------------------- Follow: --------------------------
+<add-expr-tail>:  !=  &  &&  )  ,  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<add-expr>:  !=  &  &&  )  ,  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<and-expr-tail>:  &&  )  ,  :  ;  =  ?  ]  ^  or  {  ||  }
+<and-expr>:  &&  )  ,  :  ;  =  ?  ]  ^  or  {  ||  }
+<args-expr>:  )
+<args-list-expr-tail>:  )
+<args-list-expr>:  )
+<array-size>:  ]
+<assign-expr-tail>:  )  ,
+<assign-expr>:  )  ,  :  ;  ]  {
+<assign-oper>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<case-stat-list>:  }
+<case-stat>:  case  default  }
+<cast-expr>:  !=  %  &  &&  )  *  +  ,  -  /  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<compound-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<cond-expr-tail>:  =
+<cond-expr>:  )  ,  :  ;  =  ]  {  }
+<const-expr>:  ,  :  ;  ]  }
+<decl-spec-tail>:  (  )  *  ,  ident
+<decl-spec>:  (  )  *  ,  ident
+<decl-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<decl>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<declarator>:  )  ,  :  ;  =  {
+<direct-declarator-tail>:  )  ,  :  ;  =  {
+<direct-declarator>:  )  ,  :  ;  =  {
+<else-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<enum-list-tail>:  }
+<enum-list>:  }
+<enum-spec-tail>:  (  )  *  ,  >  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<enum-spec>:  (  )  *  ,  >  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<enumerator-tail>:  ,  }
+<enumerator>:  ,  }
+<equal-expr-tail>:  &  &&  )  ,  :  ;  =  ?  ]  ^  or  {  ||  }
+<equal-expr>:  &  &&  )  ,  :  ;  =  ?  ]  ^  or  {  ||  }
+<expr-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<expr-tail>:  )  :  ;  ]
+<expr>:  )  :  ;  ]
+<extern-decl-tail>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<extern-decl>:  char  const  double  enum  extern  float  inline  int  static  struct  union  void  volatile
+<for-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<func-spec>:  (  )  *  ,  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<if-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<init-decl-list-tail>:  ;  {
+<init-decl-list>:  ;  {
+<init-decl-tail>:  ,  ;  {
+<init-decl>:  ,  ;  {
+<initializer-list-tail>:  }
+<initializer-list>:  }
+<initializer>:  ,  ;  {
+<jump-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<land-expr-tail>:  )  ,  :  ;  =  ?  ]  {  ||  }
+<land-expr>:  )  ,  :  ;  =  ?  ]  {  ||  }
+<lor-expr-tail>:  )  ,  :  ;  =  ?  ]  {  }
+<lor-expr>:  )  ,  :  ;  =  ?  ]  {  }
+<mul-expr-tail>:  !=  &  &&  )  +  ,  -  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<mul-expr>:  !=  &  &&  )  +  ,  -  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<or-expr-tail>:  &&  )  ,  :  ;  =  ?  ]  {  ||  }
+<or-expr>:  &&  )  ,  :  ;  =  ?  ]  {  ||  }
+<param-decl-tail>:  )  ,
+<param-decl>:  )  ,
+<param-list-tail>:  )
+<param-list>:  )
+<pointer-tail>:  (  ident
+<pointer>:  (  ident
+<post-expr-tail>:  !=  %  &  &&  )  *  +  ,  -  /  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<post-expr>:  !=  %  &  &&  )  *  +  ,  -  /  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<prim-expr>:  !=  #  %  &  &&  (  )  *  +  ++  ,  -  --  ->  .  /  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  [  ]  ^  or  {  ||  }
+<rela-expr-tail>:  !=  &  &&  )  ,  :  ;  =  ==  ?  ]  ^  or  {  ||  }
+<rela-expr>:  !=  &  &&  )  ,  :  ;  =  ==  ?  ]  ^  or  {  ||  }
+<shift-expr-tail>:  !=  &  &&  )  ,  :  ;  <  <=  =  ==  >  >=  ?  ]  ^  or  {  ||  }
+<shift-expr>:  !=  &  &&  )  ,  :  ;  <  <=  =  ==  >  >=  ?  ]  ^  or  {  ||  }
+<spec-qual-list-tail>:  (  *  ident
+<spec-qual-list>:  (  *  ident
+<stat-list>:  }
+<stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<storage-spec>:  (  )  *  ,  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<struct-decl-list>:  }
+<struct-decl>:  char  const  double  enum  float  int  struct  union  void  volatile  }
+<struct-declarator-list-tail>:  ;
+<struct-declarator-list>:  ;
+<struct-declarator-tail>:  ,  ;
+<struct-declarator>:  ,  ;
+<struct-or-union-spec-tail>:  (  )  *  ,  >  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<struct-or-union-spec>:  (  )  *  ,  >  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<switch-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<tran-unit>:
+<type-name>:  )  >
+<type-qual-list>:  *
+<type-qual>:  (  )  *  ,  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<type-spec>:  (  )  *  ,  >  char  const  double  enum  extern  float  ident  inline  int  static  struct  union  void  volatile
+<unary-expr>:  !=  %  &  &&  )  *  +  ,  -  /  :  ;  <  <<  <=  =  ==  >  >=  >>  ?  ]  ^  or  {  ||  }
+<unary-oper>:  !  &  (  *  +  ++  -  --  <  constant  ident  sizeof  ~
+<while-stat>:  !  &  (  *  +  ++  -  --  ;  <  break  case  char  const  constant  continue  default  do  double  enum  extern  float  for  goto  ident  if  inline  int  return  sizeof  static  struct  switch  union  void  volatile  while  {  }  ~
+<xor-expr-tail>:  &&  )  ,  :  ;  =  ?  ]  or  {  ||  }
+<xor-expr>:  &&  )  ,  :  ;  =  ?  ]  or  {  ||  }
