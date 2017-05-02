@@ -31,6 +31,8 @@ string Node::to_string()
 			return "<cast>";
 		case NK_LIST:
 			return "<list>";
+		case NK_EXTERNAL_DEF:
+			return "<def>";
 	}
 }
 
